@@ -32,18 +32,22 @@ public class Membro implements Serializable{
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
 	
+	@ManyToOne
+	@JoinColumn(name="familia_id")
+	private Familia familia;
 	
 	public Membro() {
 		
 	}
 
-	public Membro(Integer id, String nome,  Date dataNascimento, TipoMembro tipoMembro, Usuario usuario ) {
+	public Membro(Integer id, String nome,  Date dataNascimento, TipoMembro tipoMembro, Usuario usuario, Familia familia) {
 		super();
 		this.id = id;
 		this.nome = nome;		
 		this.dataNascimento = dataNascimento;
 		this.tipoMembro = tipoMembro;
 		this.usuario = usuario;
+		this.familia = familia;
 	}
 
 	public Integer getId() {
@@ -88,6 +92,21 @@ public class Membro implements Serializable{
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public Familia getFamilia() {
+		return familia;
+	}
+
+	public void setFamilia(Familia familia) {
+		this.familia = familia;
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		return "Membro [nome=" + nome + "]";
 	}
 
 	@Override
