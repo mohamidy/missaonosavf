@@ -1,0 +1,660 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-08-02T01:55:36.407Z",
+	"__export_source": "insomnia.desktop.app:v5.12.4",
+	"resources": [
+		{
+			"_id": "wrk_9539a16e75984ec6a42a3cc77bb28fc4",
+			"created": 1532225527251,
+			"description": "",
+			"modified": 1532225527251,
+			"name": "Insomnia",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_bc98f31c9b614ebd8629bd3971ff35dc",
+			"color": null,
+			"created": 1532225527303,
+			"data": {},
+			"isPrivate": false,
+			"modified": 1532225527303,
+			"name": "New Environment",
+			"parentId": "wrk_9539a16e75984ec6a42a3cc77bb28fc4",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_ff02c81559f94545b5881db112b6c0a7",
+			"cookies": [],
+			"created": 1532225527485,
+			"modified": 1532225527485,
+			"name": "Default Jar",
+			"parentId": "wrk_9539a16e75984ec6a42a3cc77bb28fc4",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_402254bef14b4022889301f73f65ca0d",
+			"created": 1532225539953,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1532225539953,
+			"modified": 1532225539953,
+			"name": "cursomc",
+			"parentId": "wrk_9539a16e75984ec6a42a3cc77bb28fc4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_f90f6b1eaf6a486c95c99321944258cc",
+			"created": 1533170166096,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1532225539903,
+			"modified": 1533170179086,
+			"name": "missaonos.AVF ",
+			"parentId": "wrk_9539a16e75984ec6a42a3cc77bb28fc4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_f8c3cb50d08b401681d27b990b9013bd",
+			"authentication": {},
+			"body": {},
+			"created": 1532225547356,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532225547356,
+			"method": "GET",
+			"modified": 1532999335981,
+			"name": "categorias Busca",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/categorias/6",
+			"_type": "request"
+		},
+		{
+			"_id": "req_37e3b591a5904b4e8b167b4544b62342",
+			"authentication": {},
+			"body": {},
+			"created": 1532789490961,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532225547306,
+			"method": "GET",
+			"modified": 1532815737888,
+			"name": "clientes",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/clientes/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_860fca322fce4a3187a503286bc688e8",
+			"authentication": {},
+			"body": {},
+			"created": 1532815303289,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532225547256,
+			"method": "GET",
+			"modified": 1532816999572,
+			"name": "pedidos",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/pedidos/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b112be5537574048840fc9cea8806986",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\": \"Nova Categoria\"\n}\t"
+			},
+			"created": 1532872368356,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532225547331,
+			"method": "POST",
+			"modified": 1532998854874,
+			"name": "categoriasInserre",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/categorias",
+			"_type": "request"
+		},
+		{
+			"_id": "req_0468e693c1544afc90630fa2650da426",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\": \"Computadores\"\n}\t"
+			},
+			"created": 1532873098260,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532225547318.5,
+			"method": "PUT",
+			"modified": 1532873835085,
+			"name": "categoriasAtualiza",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/categorias/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4b17235d39134a0aacc1af2aa3010364",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\": \"Computadores\"\n}\t"
+			},
+			"created": 1532873720733,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532225547312.25,
+			"method": "DELETE",
+			"modified": 1532873900484,
+			"name": "categoriasDeleta",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/categorias/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_89d7086802644d98bbf959375114c197",
+			"authentication": {},
+			"body": {},
+			"created": 1532998885108,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532225547343.5,
+			"method": "GET",
+			"modified": 1532998896534,
+			"name": "categorias Busca Pag",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/categorias/page?linesPerPage=9",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c6ad422ddf924999aaf30fd378fb331a",
+			"authentication": {},
+			"body": {},
+			"created": 1532999265669,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532225547206,
+			"method": "GET",
+			"modified": 1532999294291,
+			"name": "produto",
+			"parameters": [],
+			"parentId": "fld_402254bef14b4022889301f73f65ca0d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/produtos/1",
+			"_type": "request"
+		},
+		{
+			"_id": "fld_154cc9fd329742fc90ae1cc5b6cb6740",
+			"created": 1533170762407,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1533170788426,
+			"modified": 1533170790666,
+			"name": "usuario",
+			"parentId": "fld_f90f6b1eaf6a486c95c99321944258cc",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_38c92bef170c4684b857e09ccc6fa84b",
+			"created": 1533172746069,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1532698164189.5,
+			"modified": 1533172753589,
+			"name": "membros",
+			"parentId": "fld_f90f6b1eaf6a486c95c99321944258cc",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_2d92a8ed725b41edb76cdb32e671ebcf",
+			"created": 1533172791508,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1532461852071.25,
+			"modified": 1533172805446,
+			"name": "TipoMembros",
+			"parentId": "fld_f90f6b1eaf6a486c95c99321944258cc",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_6835f791b5954a2cad933a8ed3702f7d",
+			"authentication": {},
+			"body": {},
+			"created": 1533170166106,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154875.75,
+			"method": "GET",
+			"modified": 1533170773341,
+			"name": "Usuario Busca",
+			"parameters": [],
+			"parentId": "fld_154cc9fd329742fc90ae1cc5b6cb6740",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/usuarios",
+			"_type": "request"
+		},
+		{
+			"_id": "req_a552a098090a48f68ddbf7c4c8534746",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"login\": \"Thiago\"\n}\t"
+			},
+			"created": 1533170166116,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154850.75,
+			"method": "POST",
+			"modified": 1533170776695,
+			"name": "UsuarioInserre",
+			"parameters": [],
+			"parentId": "fld_154cc9fd329742fc90ae1cc5b6cb6740",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/usuarios",
+			"_type": "request"
+		},
+		{
+			"_id": "req_480fe2e9a7ee434491304dc68216d95f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"login\": \"Computadores\"\n}\t"
+			},
+			"created": 1533170166118,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154775.75,
+			"method": "PUT",
+			"modified": 1533170777848,
+			"name": "UsuarioAtualiza",
+			"parameters": [],
+			"parentId": "fld_154cc9fd329742fc90ae1cc5b6cb6740",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/usuarios/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_bf47057a53a249ca9eae64f7982f0afa",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"flag_ativo\": \"1\"\n}\t"
+			},
+			"created": 1533170166120,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154725.75,
+			"method": "DELETE",
+			"modified": 1533170778960,
+			"name": "usuarioDeleta",
+			"parameters": [],
+			"parentId": "fld_154cc9fd329742fc90ae1cc5b6cb6740",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/usuarios/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_8a5d717f6d1f460c95fef44045d2aa8c",
+			"authentication": {},
+			"body": {},
+			"created": 1533170166122,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154825.75,
+			"method": "GET",
+			"modified": 1533170775444,
+			"name": "Usuario Busca Pag",
+			"parameters": [],
+			"parentId": "fld_154cc9fd329742fc90ae1cc5b6cb6740",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/usuarios/page",
+			"_type": "request"
+		},
+		{
+			"_id": "req_15462189ff80466fb8e04c5b297dea60",
+			"authentication": {},
+			"body": {},
+			"created": 1533172746073,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154875.75,
+			"method": "GET",
+			"modified": 1533172764319,
+			"name": "Membros Busca",
+			"parameters": [],
+			"parentId": "fld_38c92bef170c4684b857e09ccc6fa84b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membros",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5674da5ac38f49c5923ef7a8f205a0c0",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"login\": \"Thiago\"\n}\t"
+			},
+			"created": 1533172746076,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154850.75,
+			"method": "POST",
+			"modified": 1533172769709,
+			"name": "UsuarioInserre",
+			"parameters": [],
+			"parentId": "fld_38c92bef170c4684b857e09ccc6fa84b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membros",
+			"_type": "request"
+		},
+		{
+			"_id": "req_302a19f278264a4da73b51c5c1965099",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"login\": \"Computadores\"\n}\t"
+			},
+			"created": 1533172746084,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154775.75,
+			"method": "PUT",
+			"modified": 1533172780294,
+			"name": "UsuarioAtualiza",
+			"parameters": [],
+			"parentId": "fld_38c92bef170c4684b857e09ccc6fa84b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membros/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cf48af4b51e14e6b9e260bb0c445d3f1",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"flag_ativo\": \"1\"\n}\t"
+			},
+			"created": 1533172746087,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154725.75,
+			"method": "DELETE",
+			"modified": 1533172888281,
+			"name": "usuarioDeleta",
+			"parameters": [],
+			"parentId": "fld_38c92bef170c4684b857e09ccc6fa84b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membros/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c78565b44e6740249b1b62edf3e379ba",
+			"authentication": {},
+			"body": {},
+			"created": 1533172746090,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154825.75,
+			"method": "GET",
+			"modified": 1533172775245,
+			"name": "Usuario Busca Pag",
+			"parameters": [],
+			"parentId": "fld_38c92bef170c4684b857e09ccc6fa84b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membros/page",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c427431c1850407d9b776f6c366aa916",
+			"authentication": {},
+			"body": {},
+			"created": 1533172791513,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154875.75,
+			"method": "GET",
+			"modified": 1533172810983,
+			"name": "Membros Busca",
+			"parameters": [],
+			"parentId": "fld_2d92a8ed725b41edb76cdb32e671ebcf",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/tipomembros",
+			"_type": "request"
+		},
+		{
+			"_id": "req_7e7c41192fe24e829ded786e2b2cb43e",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"login\": \"Thiago\"\n}\t"
+			},
+			"created": 1533172791518,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154850.75,
+			"method": "POST",
+			"modified": 1533172827613,
+			"name": "tipomembros Inserre",
+			"parameters": [],
+			"parentId": "fld_2d92a8ed725b41edb76cdb32e671ebcf",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/tipomembros",
+			"_type": "request"
+		},
+		{
+			"_id": "req_0723ae560cf84853be1b6443c12827fc",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"tipo\": \"Computadores\"\n}\t"
+			},
+			"created": 1533172791525,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154775.75,
+			"method": "PUT",
+			"modified": 1533172872023,
+			"name": "UsuarioAtualiza",
+			"parameters": [],
+			"parentId": "fld_2d92a8ed725b41edb76cdb32e671ebcf",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/tipomembros/3",
+			"_type": "request"
+		},
+		{
+			"_id": "req_a5ac65005644429083686fd14f5ce014",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"flag_ativo\": \"1\"\n}\t"
+			},
+			"created": 1533172791527,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154725.75,
+			"method": "DELETE",
+			"modified": 1533172843003,
+			"name": "usuarioDeleta",
+			"parameters": [],
+			"parentId": "fld_2d92a8ed725b41edb76cdb32e671ebcf",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/tipomembros/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_8484589ab130444a883145da7d334473",
+			"authentication": {},
+			"body": {},
+			"created": 1533172791529,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154825.75,
+			"method": "GET",
+			"modified": 1533172835216,
+			"name": "tipomembros Busca Pag",
+			"parameters": [],
+			"parentId": "fld_2d92a8ed725b41edb76cdb32e671ebcf",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/tipomembros/page",
+			"_type": "request"
+		}
+	]
+}
