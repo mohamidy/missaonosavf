@@ -16,13 +16,13 @@ public class Usuario implements Serializable{
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-	Integer id;
-	String login;
-	String senha;
+	private Integer id;
+	private String login;
+	private String senha;
 	
 	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
-	Date dataUltimoAcesso;
-	Integer flagAtivo;
+	private Date dataUltimoAcesso;
+	private Integer flagAtivo;
 	
 	public Usuario() {
 		
