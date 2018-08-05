@@ -1,7 +1,9 @@
 package com.costaismael.missaonos.avf;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -46,20 +48,31 @@ public class MissaonosavfApplication implements CommandLineRunner{
 		TipoMembro tpMembro = new TipoMembro(null, "Pai");
 		TipoMembro tpMembro2 = new TipoMembro(null, "Mãe");
 		TipoMembro tpMembro3 = new TipoMembro(null, "Gato");
+		TipoMembro tpMembro4 = new TipoMembro(null, "Tio");
+		
+		List<Familia> familias = new ArrayList<>();
+		List<Familia> familias2 = new ArrayList<>();
 		
 		Familia fam1 = new Familia(null, "Antiqueira Costa");
-				
-		Membro mem1 = new Membro(null, "Ismael",sdf.parse("30/04/2018 10:32"),tpMembro,user1,fam1);		
-		Membro mem2 = new Membro(null, "Camilla",sdf.parse("30/04/2018 10:32"),tpMembro2,user2,fam1);
-		// neste caso o gato não tem login
-		Membro mem3 = new Membro(null, "missy",sdf.parse("30/04/2018 10:32"),tpMembro3,null,fam1);
+		Familia fam2 = new Familia(null, "Castro Silveira");
+
 		
-		fam1.getMembros().addAll(Arrays.asList(mem1,mem2,mem3));		
+		familias.addAll(Arrays.asList(fam1));
+		familias2.addAll(Arrays.asList(fam2));
+				
+		Membro mem1 = new Membro(null, "Ismael",sdf.parse("30/04/2018 10:32"),tpMembro,user1,familias);
+		Membro mem2 = new Membro(null, "Camilla",sdf.parse("30/04/2018 10:32"),tpMembro2,user2,familias);
+		// neste caso o gato não tem login
+		Membro mem3 = new Membro(null, "missy",sdf.parse("30/04/2018 10:32"),tpMembro3,null,familias);
+		// Ismael tio da familai castro silveira
+		Membro mem4 = new Membro(null, "Ismael",sdf.parse("30/04/2018 10:32"),tpMembro4,user1,familias2);
+		
+		fam1.getMembros().addAll(Arrays.asList(mem1,mem2,mem3,mem4));		
 		
 		usuarioRepository.save(Arrays.asList(user1,user2,user3));	
-		tipoMembroRepository.save(Arrays.asList(tpMembro,tpMembro2, tpMembro3));
-		familiaRepository.save(Arrays.asList(fam1));
-		membroRepository.save(Arrays.asList(mem1,mem2,mem3));		
+		tipoMembroRepository.save(Arrays.asList(tpMembro,tpMembro2, tpMembro3,tpMembro4));
+		familiaRepository.save(Arrays.asList(fam1,fam2));
+		membroRepository.save(Arrays.asList(mem1,mem2,mem3,mem4));		
 		
 		System.out.println(fam1.toString());
 	}

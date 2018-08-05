@@ -1,16 +1,21 @@
 package com.costaismael.missaonos.avf.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Membro implements Serializable{
@@ -32,22 +37,26 @@ public class Membro implements Serializable{
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
 	
-	@ManyToOne
-	@JoinColumn(name="familia_id")
-	private Familia familia;
-	
+	@JsonIgnore
+	@ManyToMany
+	@JoinTable(name= "MEMBRO_FAMILIA",
+			   joinColumns = @JoinColumn(name = "membro_id"),
+			   inverseJoinColumns = @JoinColumn(name = "familia_id")
+			 )
+	private List<Familia> familias = new ArrayList<>();
+		
 	public Membro() {
 		
 	}
 
-	public Membro(Integer id, String nome,  Date dataNascimento, TipoMembro tipoMembro, Usuario usuario, Familia familia) {
+	public Membro(Integer id, String nome,  Date dataNascimento, TipoMembro tipoMembro, Usuario usuario, List<Familia> familias) {
 		super();
 		this.id = id;
 		this.nome = nome;		
 		this.dataNascimento = dataNascimento;
 		this.tipoMembro = tipoMembro;
 		this.usuario = usuario;
-		this.familia = familia;
+		this.familias = familias;
 	}
 
 	public Integer getId() {
@@ -94,16 +103,14 @@ public class Membro implements Serializable{
 		this.usuario = usuario;
 	}
 
-	public Familia getFamilia() {
-		return familia;
+	public List<Familia> getFamilias() {
+		return familias;
 	}
 
-	public void setFamilia(Familia familia) {
-		this.familia = familia;
+	public void setFamilias(List<Familia> familias) {
+		this.familias = familias;
 	}
 
-	
-	
 	@Override
 	public String toString() {
 		return "Membro [nome=" + nome + "]";

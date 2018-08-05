@@ -8,9 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Familia implements Serializable{
@@ -21,8 +19,8 @@ public class Familia implements Serializable{
 	Integer id;
 	String nome;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy="familia")
+
+	@ManyToMany(mappedBy="familias")	
 	private List<Membro> membros =  new ArrayList<>();
 	
 	public Familia() {
