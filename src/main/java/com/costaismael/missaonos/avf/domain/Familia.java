@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Familia implements Serializable{
@@ -19,9 +21,9 @@ public class Familia implements Serializable{
 	Integer id;
 	String nome;
 	
-
-	@ManyToMany(mappedBy="familias")	
-	private List<Membro> membros =  new ArrayList<>();
+	@JsonIgnore
+	@OneToMany(mappedBy="id.familia")
+	private List<MembroFamilia> membrosFamilias =  new ArrayList<>();
 	
 	public Familia() {
 		
@@ -49,17 +51,12 @@ public class Familia implements Serializable{
 		this.nome = nome;
 	}
 	
-	public List<Membro> getMembros() {
-		return membros;
+	public List<MembroFamilia> getMembrosFamilias() {
+		return membrosFamilias;
 	}
 
-	public void setMembros(List<Membro> membros) {
-		this.membros = membros;
-	}
-	
-	@Override
-	public String toString() {
-		return "Familia [membros=" + membros + "]";
+	public void setMembrosFamilias(List<MembroFamilia> membrosFamilias) {
+		this.membrosFamilias = membrosFamilias;
 	}
 
 	@Override
