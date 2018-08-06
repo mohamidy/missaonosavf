@@ -22,7 +22,7 @@ public class Familia implements Serializable{
 	String nome;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="id.familia")
+	@OneToMany(mappedBy="familia")
 	private List<MembroFamilia> membrosFamilias =  new ArrayList<>();
 	
 	public Familia() {

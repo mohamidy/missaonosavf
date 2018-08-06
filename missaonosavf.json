@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2018-08-02T01:55:36.407Z",
+	"__export_date": "2018-08-06T02:01:46.992Z",
 	"__export_source": "insomnia.desktop.app:v5.12.4",
 	"resources": [
 		{
@@ -276,6 +276,28 @@
 			"_type": "request_group"
 		},
 		{
+			"_id": "fld_ddc0733aadd34a39969b5ec81b0dfe76",
+			"created": 1533509775401,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1532580008130.375,
+			"modified": 1533509785029,
+			"name": "familias",
+			"parentId": "fld_f90f6b1eaf6a486c95c99321944258cc",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_ca3e7197983c428b8fa06d6ad17b40f2",
+			"created": 1533519793533,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1532520930100.8125,
+			"modified": 1533519817663,
+			"name": "membros familias",
+			"parentId": "fld_f90f6b1eaf6a486c95c99321944258cc",
+			"_type": "request_group"
+		},
+		{
 			"_id": "req_6835f791b5954a2cad933a8ed3702f7d",
 			"authentication": {},
 			"body": {},
@@ -284,7 +306,7 @@
 			"headers": [],
 			"metaSortKey": -1532698154875.75,
 			"method": "GET",
-			"modified": 1533170773341,
+			"modified": 1533509176053,
 			"name": "Usuario Busca",
 			"parameters": [],
 			"parentId": "fld_154cc9fd329742fc90ae1cc5b6cb6740",
@@ -654,6 +676,280 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "http://localhost:8080/tipomembros/page",
+			"_type": "request"
+		},
+		{
+			"_id": "req_dea18231a4f9492db7f13b4f6cb9be3a",
+			"authentication": {},
+			"body": {},
+			"created": 1533509775408,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154875.75,
+			"method": "GET",
+			"modified": 1533520633394,
+			"name": "Familias",
+			"parameters": [],
+			"parentId": "fld_ddc0733aadd34a39969b5ec81b0dfe76",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/familias",
+			"_type": "request"
+		},
+		{
+			"_id": "req_03f6a0c8c9564d468e9498080a52299d",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\t\t\"nome\": \"Hostin\"\n}\t"
+			},
+			"created": 1533509775413,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154850.75,
+			"method": "POST",
+			"modified": 1533520659516,
+			"name": "UsuarioInserre",
+			"parameters": [],
+			"parentId": "fld_ddc0733aadd34a39969b5ec81b0dfe76",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/familias",
+			"_type": "request"
+		},
+		{
+			"_id": "req_da85f86436264b64b73c1fcb3c4f8ca7",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\t\"nome\": \"Hostin Costa\"\n}\t"
+			},
+			"created": 1533509775418,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154775.75,
+			"method": "PUT",
+			"modified": 1533520709661,
+			"name": "UsuarioAtualiza",
+			"parameters": [],
+			"parentId": "fld_ddc0733aadd34a39969b5ec81b0dfe76",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/familias/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_227cbfb10aa649d9a8788a908d9a03d0",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n \"id\": 1\n}\t"
+			},
+			"created": 1533509775422,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154725.75,
+			"method": "DELETE",
+			"modified": 1533520835025,
+			"name": "usuarioDeleta",
+			"parameters": [],
+			"parentId": "fld_ddc0733aadd34a39969b5ec81b0dfe76",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/familias/4",
+			"_type": "request"
+		},
+		{
+			"_id": "req_754c34f40c934dabaa62cb45598f4bf4",
+			"authentication": {},
+			"body": {},
+			"created": 1533509775424,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154825.75,
+			"method": "GET",
+			"modified": 1533520673362,
+			"name": "Usuario Busca Pag",
+			"parameters": [],
+			"parentId": "fld_ddc0733aadd34a39969b5ec81b0dfe76",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/familias/page",
+			"_type": "request"
+		},
+		{
+			"_id": "req_823a5e7bf871420993c8475c090fe64c",
+			"authentication": {},
+			"body": {},
+			"created": 1533520623966,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154863.25,
+			"method": "GET",
+			"modified": 1533520623966,
+			"name": "Membros da Familia (Copy)",
+			"parameters": [],
+			"parentId": "fld_ddc0733aadd34a39969b5ec81b0dfe76",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/familias/membros/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_24f3709b7ffc4f9aa853610c6299aae7",
+			"authentication": {},
+			"body": {},
+			"created": 1533519793538,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154875.75,
+			"method": "GET",
+			"modified": 1533519860642,
+			"name": "Membros da Familia",
+			"parameters": [],
+			"parentId": "fld_ca3e7197983c428b8fa06d6ad17b40f2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membrosfamilias",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cc4c7646e8f94d62ac47ab988b389f8b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "\t{\n\t\t\"id\": 10,\n\t\t\"membro\": {\n\t\t\t\"id\": 3,\n\t\t\t\"nome\": \"Ismael\",\n\t\t\t\"dataNascimento\": \"30/04/2018 13:32\",\n\t\t\t\"tipoMembro\": {\n\t\t\t\t\"id\": 1,\n\t\t\t\t\"tipo\": \"Pai\"\n\t\t\t}\n\t\t},\n\t\t\"familia\": {\n\t\t\t\"id\": 2,\n\t\t\t\"nome\": \"Antiqueira Costa\"\n\t\t},\n\t\t\"familiaPrincipal\": 1\n\t}"
+			},
+			"created": 1533519793544,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154850.75,
+			"method": "POST",
+			"modified": 1533520521479,
+			"name": "UsuarioInserre",
+			"parameters": [],
+			"parentId": "fld_ca3e7197983c428b8fa06d6ad17b40f2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membrosfamilias",
+			"_type": "request"
+		},
+		{
+			"_id": "req_05ce4d4fd205401faa07752cec4be536",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"familiaPrincipal\": \"0\"\n}\t"
+			},
+			"created": 1533519793548,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154775.75,
+			"method": "PUT",
+			"modified": 1533520109968,
+			"name": "UsuarioAtualiza",
+			"parameters": [],
+			"parentId": "fld_ca3e7197983c428b8fa06d6ad17b40f2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membrosfamilias/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_319672d9391d4db3ad6fb01ebf14deb2",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"familiaPrincipal\": \"1\"\n}\t"
+			},
+			"created": 1533519793550,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_d85a0824503b4e318e399524c6d6238a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1532698154725.75,
+			"method": "DELETE",
+			"modified": 1533520144065,
+			"name": "usuarioDeleta",
+			"parameters": [],
+			"parentId": "fld_ca3e7197983c428b8fa06d6ad17b40f2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membrosfamilias/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_19cecff9a4054539aff2c77c9157c041",
+			"authentication": {},
+			"body": {},
+			"created": 1533519793553,
+			"description": "",
+			"headers": [],
+			"metaSortKey": -1532698154825.75,
+			"method": "GET",
+			"modified": 1533520092489,
+			"name": "Usuario Busca Pag",
+			"parameters": [],
+			"parentId": "fld_ca3e7197983c428b8fa06d6ad17b40f2",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/membrosfamilias/page",
 			"_type": "request"
 		}
 	]

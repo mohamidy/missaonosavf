@@ -14,56 +14,53 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.costaismael.missaonos.avf.domain.Familia;
 import com.costaismael.missaonos.avf.domain.MembroFamilia;
-import com.costaismael.missaonos.avf.services.FamiliaService;
 import com.costaismael.missaonos.avf.services.MembroFamiliaService;
 
 @RestController
-@RequestMapping(value="/familias")
-public class FamiliaResource {
+@RequestMapping(value="/membrosfamilias")
+public class MembroFamiliaResource {
 	
 	@Autowired
-	private FamiliaService service;
-	@Autowired
-	private MembroFamiliaService service2;
+	private MembroFamiliaService service;
 	
 	//find
 	@RequestMapping(value="/{id}",method = RequestMethod.GET)
-	public ResponseEntity<Familia> find(@PathVariable Integer id) {			
-		Familia obj = service.find(id);
+	public ResponseEntity<MembroFamilia> find(@PathVariable Integer id) {			
+		MembroFamilia obj = service.find(id);
 		return ResponseEntity.ok().body(obj);		
 	}
 	
 	//findAll
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<List<Familia>> findAll() {			
-		List<Familia> list = service.findAll();		
+	public ResponseEntity<List<MembroFamilia>> findAll() {			
+		List<MembroFamilia> list = service.findAll();		
 		return ResponseEntity.ok().body(list);		
 	}
 	
 	//findMembros
 	@RequestMapping(value="/membros/{id}",method = RequestMethod.GET)
 	public ResponseEntity<List<MembroFamilia>> findMembros(@PathVariable Integer id) {	
-		List<MembroFamilia> obj = service2.findByFamiliaId(id);
+		List<MembroFamilia> obj = service.findByFamiliaId(id);
 		return ResponseEntity.ok().body(obj);		
 	}
 	
 	
 	//findPage
 		@RequestMapping(value="/page",method = RequestMethod.GET)
-		public ResponseEntity<Page<Familia>> findPage(
+		public ResponseEntity<Page<MembroFamilia>> findPage(
 				@RequestParam(value="page",defaultValue = "0") Integer page,
 				@RequestParam(value="linesPerPage",defaultValue = "24") Integer linesPerPage, 
 				@RequestParam(value="orderBy",defaultValue = "id") String orderBy, 
 				@RequestParam(value="direction",defaultValue = "ASC") String direction) {			
 			//Converte uma lista para outra lista
-			Page<Familia> list = service.findPage(page, linesPerPage, orderBy, direction);			
+			Page<MembroFamilia> list = service.findPage(page, linesPerPage, orderBy, direction);			
 			return ResponseEntity.ok().body(list);		
 		}
-	//insert
+
+    //insert
 	@RequestMapping(method=RequestMethod.POST)
-	public ResponseEntity<Void> insert(@RequestBody Familia obj){
+	public ResponseEntity<Void> insert(@RequestBody MembroFamilia obj){
 		obj = service.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
 				.path("/{id}").buildAndExpand(obj.getId()).toUri();
@@ -72,7 +69,7 @@ public class FamiliaResource {
 	
 	//update
 	@RequestMapping(value="/{id}",method = RequestMethod.PUT)
-	public ResponseEntity<Void> update(@RequestBody Familia obj, @PathVariable Integer id){
+	public ResponseEntity<Void> update(@RequestBody MembroFamilia obj, @PathVariable Integer id){
 		obj.setId(id);
 		obj = service.update(obj);
 		

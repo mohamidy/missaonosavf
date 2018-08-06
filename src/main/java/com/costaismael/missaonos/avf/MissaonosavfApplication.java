@@ -67,13 +67,13 @@ public class MissaonosavfApplication implements CommandLineRunner{
 		Membro mem4 = new Membro(null, "Ismael",sdf.parse("30/04/2018 10:32"),tpMembro4,user1);
 		Membro mem5 = new Membro(null, "Maria",sdf.parse("30/04/2018 10:32"),tpMembro5,null);
 		
-		MembroFamilia memf1 = new MembroFamilia(mem1, fam1, 1);
-		MembroFamilia memf2 = new MembroFamilia(mem2, fam1, 1);
-		MembroFamilia memf3 = new MembroFamilia(mem3, fam1, 1);
-		MembroFamilia memf4 = new MembroFamilia(mem4, fam2, 1);
+		MembroFamilia memf1 = new MembroFamilia(null,mem1, fam1, 1);
+		MembroFamilia memf2 = new MembroFamilia(null,mem2, fam1, 1);
+		MembroFamilia memf3 = new MembroFamilia(null,mem3, fam1, 1);
+		MembroFamilia memf4 = new MembroFamilia(null,mem4, fam2, 1);
 		// Maria é avó da familai costa e silveira
-		MembroFamilia memf5 = new MembroFamilia(mem5, fam1, 0);
-		MembroFamilia memf6 = new MembroFamilia(mem5, fam2, 0);
+		MembroFamilia memf5 = new MembroFamilia(null,mem5, fam1, 0);
+		MembroFamilia memf6 = new MembroFamilia(null,mem5, fam2, 0);
 		
         fam1.getMembrosFamilias().addAll(Arrays.asList(memf1,memf2,memf3,memf5));
         fam2.getMembrosFamilias().addAll(Arrays.asList(memf4,memf6));

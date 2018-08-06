@@ -24,7 +24,7 @@ public class UsuarioService {
 		Usuario obj = repo.findOne(id);
 		
 		if(obj==null) {
-		   throw new ObjectNotFoundException("Objeto não encontado id: "+id
+		   throw new ObjectNotFoundException("Objeto não encontrado id: "+id
 				   +",Tipo: "+Usuario.class.getName()); 	
 		}		
 		return obj;
@@ -54,7 +54,7 @@ public class UsuarioService {
 		try {
 		repo.delete(id);
 		}catch (DataIntegrityViolationException e) {
-		 throw new DataIntegrityException("Não é possível deletar Usuario que possui produtos.");	
+		 throw new DataIntegrityException("Não é possível deletar Usuario.");	
 		}
 	}	
 }

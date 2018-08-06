@@ -24,7 +24,7 @@ public class TipoMembroService {
 		TipoMembro obj = repo.findOne(id);
 		
 		if(obj==null) {
-		   throw new ObjectNotFoundException("Objeto não encontado id: "+id
+		   throw new ObjectNotFoundException("Objeto não encontrado id: "+id
 				   +",Tipo: "+TipoMembro.class.getName()); 	
 		}		
 		return obj;
@@ -54,7 +54,7 @@ public class TipoMembroService {
 		try {
 		repo.delete(id);
 		}catch (DataIntegrityViolationException e) {
-		 throw new DataIntegrityException("Não é possível deletar TipoMembro que possui produtos.");	
+		 throw new DataIntegrityException("Não é possível deletar TipoMembro.");	
 		}
 	}	
 }

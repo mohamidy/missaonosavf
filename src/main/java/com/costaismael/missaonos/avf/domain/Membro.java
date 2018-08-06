@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Membro implements Serializable{
@@ -31,11 +32,14 @@ public class Membro implements Serializable{
 	@JoinColumn(name="tipo_membro_id")
 	private TipoMembro tipoMembro;
 	
+
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name="usuario_id")
 	private Usuario usuario;
 	
-	@OneToMany(mappedBy="id.membro")
+	@JsonIgnore
+	@OneToMany(mappedBy="membro")
 	private List<MembroFamilia> membrosFamilias =  new ArrayList<>();
 		
 	public Membro() {
