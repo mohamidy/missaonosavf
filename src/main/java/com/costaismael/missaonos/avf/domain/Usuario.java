@@ -19,6 +19,7 @@ public class Usuario implements Serializable{
 	private Integer id;
 	private String login;
 	private String senha;
+	private String email;
 	
 	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
 	private Date dataUltimoAcesso;
@@ -28,11 +29,12 @@ public class Usuario implements Serializable{
 		
 	}
 	
-	public Usuario(Integer id, String login, String senha, Date dataUltimoAcesso, Integer flagAtivo) {
+	public Usuario(Integer id, String login, String senha, String email,Date dataUltimoAcesso, Integer flagAtivo) {
 		super();
 		this.id = id;
 		this.login = login;
 		this.senha = senha;
+		this.email = email;
 		this.dataUltimoAcesso = dataUltimoAcesso;
 		this.flagAtivo = flagAtivo;
 	}
@@ -75,6 +77,14 @@ public class Usuario implements Serializable{
 
 	public void setFlagAtivo(Integer flagAtivo) {
 		this.flagAtivo = flagAtivo;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override

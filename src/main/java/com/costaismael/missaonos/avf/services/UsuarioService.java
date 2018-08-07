@@ -34,6 +34,28 @@ public class UsuarioService {
 		return repo.findAll();
 	}
 	
+	public Usuario findByLoginAndSenha(String login, String senha) {
+		
+		Usuario obj = repo.findByLoginAndSenha(login, senha);
+		
+		if(obj==null) {
+		   throw new ObjectNotFoundException("Objeto não encontrado id: "+login
+				   +",Tipo: "+Usuario.class.getName()); 	
+		}	
+		return obj;
+	}
+	
+	public Usuario findByEmailAndSenha(String email, String senha) {
+		
+		Usuario obj = repo.findByEmailAndSenha(email, senha);
+		
+		if(obj==null) {
+		   throw new ObjectNotFoundException("Objeto não encontrado id: "+email
+				   +",Tipo: "+Usuario.class.getName()); 	
+		}
+		return obj;
+	}
+	
 	public Page<Usuario> findPage(Integer page, Integer linesPerPage, String orderBy, String direction){
 		PageRequest pageRequest = new PageRequest(page, linesPerPage, Direction.valueOf(direction), orderBy);
 		return repo.findAll(pageRequest);		

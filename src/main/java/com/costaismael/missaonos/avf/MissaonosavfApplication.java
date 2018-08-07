@@ -43,9 +43,9 @@ public class MissaonosavfApplication implements CommandLineRunner{
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		
-		Usuario user1 = new Usuario(null, "ismael", "123", sdf.parse("30/04/2018 10:32"), 1);
-		Usuario user2 = new Usuario(null, "camilla", "123", sdf.parse("30/09/2018 10:32"), 1);
-		Usuario user3 = new Usuario(null, "cafu", "123", sdf.parse("30/12/2018 10:32"), 1);
+		Usuario user1 = new Usuario(null, "ismael", "123","ismael@gmail.com", sdf.parse("30/04/2018 10:32"), 1);
+		Usuario user2 = new Usuario(null, "camilla", "123", "camilla@gmail.com",sdf.parse("30/09/2018 10:32"), 1);
+		Usuario user3 = new Usuario(null, "cafu", "123", "cafu@gmail.com",sdf.parse("30/12/2018 10:32"), 1);
 		
 		TipoMembro tpMembro = new TipoMembro(null, "Pai");
 		TipoMembro tpMembro2 = new TipoMembro(null, "Mãe");

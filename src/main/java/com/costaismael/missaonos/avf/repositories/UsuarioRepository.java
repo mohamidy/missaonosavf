@@ -7,5 +7,7 @@ import com.costaismael.missaonos.avf.domain.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
-
+	
+	Usuario  findByLoginAndSenha(String login, String senha);
+	Usuario  findByEmailAndSenha(String email, String senha);
 }

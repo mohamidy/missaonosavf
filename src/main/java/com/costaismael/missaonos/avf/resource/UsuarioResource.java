@@ -38,6 +38,16 @@ public class UsuarioResource {
 		return ResponseEntity.ok().body(list);		
 	}
 	
+	@RequestMapping(value="/login",method=RequestMethod.POST)
+	public ResponseEntity<Void> loginValidate(@RequestBody Usuario obj){		
+		if(obj.getLogin() !=null) {
+			obj = service.findByLoginAndSenha(obj.getLogin(),obj.getSenha());	
+		}else {
+			  obj = service.findByEmailAndSenha(obj.getEmail(),obj.getSenha());	
+		}	
+		return ResponseEntity.noContent().build();
+	}
+	
 	//findPage
 		@RequestMapping(value="/page",method = RequestMethod.GET)
 		public ResponseEntity<Page<Usuario>> findPage(
